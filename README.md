@@ -14,7 +14,7 @@ create a copy of the file, try to implement it, and test.  So I would have sever
 of trying to add in something new, eventually just carrying on with whatever revision/copy of the file that actually worked.
 
 At this point, the only file that works is the "Copy of Standard.xml" and has collected dust after being untouched for several years.
-However, I did include all the older, and non-working versions of the *.XML files simply for viewing purposes.
+However, I did include all the older, and non-working versions of the *.XML files which date all the way back to 2006, for viewing purposes.
 
 In order to actually PLAY the game, start the "EnigmaSand4-bin.jar" file.  
 In the bottom left hand corner, click File -> Load Mod.  Then, select the "Copy of Standard.xml" file.  Everything should load,
