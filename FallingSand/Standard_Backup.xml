@@ -1,0 +1,357 @@
+<enigma background="ERASER" barrier="BLAH">
+<channel name="heat" min="0" max="400"/>
+
+<element name="BLAH" color="333333">
+</element>
+
+
+
+<element name="NIRVANA" color="9922ff" menu="1">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="NIRVANA1" chance="0.15"/></trigger>
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.15"/></trigger>
+</element>
+
+<element name="NIRVANA1" color="9900DD" menu="0">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="NIRVANA2" chance="0.15"/></trigger>
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.10"/></trigger>
+</element>
+
+<element name="NIRVANA2" color="9933FF" menu="0">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="NIRVANA3" chance="0.15"/></trigger>
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.05"/></trigger>
+</element>
+
+<element name="NIRVANA3" color="9900BB" menu="0">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="NIRVANA" chance="0.03"/></trigger>
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.05"/></trigger>
+</element>
+
+<element name="GROUND" color="663300" menu="1">
+</element>
+
+<element name="TUMS" color="ffccff" menu="1">
+<trigger type="SULPHIRIC ACID" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="ERASER"/></trigger>
+</element>
+
+<element name="ACID-SAF WALL" color="009900" menu="1">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="ERASER"/></trigger>
+</element>
+
+<element name="TORCH" color="ff0000" menu="1">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="FIRE"/></trigger>
+</element>
+
+<element name="CRYSTAL" color="ffffff" menu="1">
+<trigger type="SULPHIRIC ACID" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="CRYSTAL" chance="0.45"/></trigger>
+</element>
+
+<element name="ERASER" color="000000" menu="1">
+</element>
+
+<element name="GRAVEL" color="cccc99" menu="1">
+<trigger dir="D" type="ERASER|WATER|OIL">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL">
+<swap chance="0.45"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.05"/></trigger>
+</element>
+
+<element name="SALTWATER" color="4080ff">
+<trigger dir="D" type="ERASER|OIL|WATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|OIL|WATER">
+<swap chance="0.45"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.05"/></trigger>
+</element>
+
+<element name="POLLUTION" color="cccc33" menu="1">
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="SULPHIRIC ACID"/></trigger>
+
+<trigger dir="U" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.05"/></trigger>
+<trigger dir="UL|UR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.10"/></trigger>
+<trigger dir="L|R" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.10"/></trigger>
+</element>
+
+<element name="WATER" color="2020ff" menu="1">
+<trigger dir="D" type="ERASER|OIL">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|OIL">
+<swap chance="0.65"/></trigger>
+<trigger dir="L|R" type="ERASER|OIL">
+<swap chance="0.15"/></trigger>
+</element>
+
+<element name="METHANE" color="999999" menu="1">
+
+<trigger type="FIRE">
+<explosion type="4" result="FIRE" size="200.0"/>
+<cresult type="FIRE"/>
+</trigger>
+
+<trigger dir="U" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.05"/></trigger>
+<trigger dir="UL|UR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.10"/></trigger>
+<trigger dir="L|R" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.10"/></trigger>
+</element>
+
+<element name="STEAM" color="33ffff" menu="1">
+<trigger dir="U" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.10"/></trigger>
+<trigger dir="UL" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.06"/></trigger>
+<trigger dir="UR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.06"/></trigger>
+</element>
+
+<element name="HYDROGEN GAS" color="ccffff" menu="1">
+
+<trigger type="FIRE">
+<explosion type="3" result="FIRE" size="2.0"/>
+<cresult type="FIRE"/>
+</trigger>
+
+<trigger dir="U" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.10"/></trigger>
+<trigger dir="UR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.07"/></trigger>
+<trigger dir="UL" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.07"/></trigger>
+</element>
+
+<element name="FIRECRACKER" color="ff9900" menu="1">
+
+<trigger type="FIRE">
+<explosion type="3" result="FIRE" size="4.0"/>
+<cresult type="FIRE"/>
+</trigger>
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="UL|UR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+</element>
+
+<element name="INCONNU" color="ff00cc" menu="1">
+<trigger type="SALTWATER" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="INCONNU"/></trigger>
+
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.25"/></trigger>
+</element>
+
+
+<element name="SULPHIRIC ACID" color="ccff00" menu="1">
+<trigger type="GRAVEL" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="SALTWATER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="SALT" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="FIRE" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="STEAM" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="METHANE" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="HYDROGEN GAS" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="FIRECRACKER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="BOTTLE ROCKET" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="NITRO" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="SOAP" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="NITROGEN" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="SICHERUNG" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="INCONNU" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="PLANT" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="OIL" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="DRY ICE" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="SEEDS" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="TNT" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+<trigger type="TORCH" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="ERASER" chance="0.01"/></trigger>
+
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.25"/></trigger>
+</element>
+
+<element name="DRY ICE" color="00ccff" menu="1">
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="DRY ICE" chance="0.05"/></trigger>
+<trigger type="STEAM" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="DRY ICE" chance="0.01"/></trigger>
+
+<trigger type="FIRE">
+<cresult type="STEAM"/>
+</trigger>
+
+</element>
+
+<element name="SEEDS" color="66ff66" menu="1">
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="PLANT" chance="0.10"/></trigger>
+
+<trigger type="FIRE">
+<cresult type="FIRE"/>
+</trigger>
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.25"/></trigger>
+</element>
+
+<element name="FIRE EXTINGUISHER" color="ffcc99" menu="1">
+<trigger type="FIRE" dir="D|DL|DR">
+<cresult type="ERASER" chance="0.80"/></trigger>
+<trigger type="TORCH" dir="D|DL|DR">
+<cresult type="ERASER" chance="0.60"/></trigger>
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.86"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.02"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.02"/></trigger>
+</element>
+
+<element name="NITROGEN" color="66ccff" menu="1">
+<trigger type="SOAP" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="NITRO"/></trigger>
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="DRY ICE"/></trigger>
+
+<trigger type="FIRE">
+<cresult type="STEAM"/>
+</trigger>
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.25"/></trigger>
+</element>
+
+<element name="SUB-ZERO FRIDGE" color="003366" menu="1">
+<trigger type="ERASER" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="NITROGEN"/></trigger>
+</element>
+
+<element name="SOAP" color="cccccc" menu="1">
+<trigger type="NITROGEN" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="NITRO"/></trigger>
+</element>
+
+<element name="PLANT" color="20cc20" menu="1">
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<cresult type="PLANT" chance="0.30"/></trigger>
+
+<trigger type="FIRE">
+<bresult type="FIRE" chance="0.50"/>
+<aresult type="FIRE" chance="0.50"/></trigger>
+</element>
+
+<element name="FIRE" color="ff4040" menu="1">
+<trigger dir="U" type="ERASER">
+<swap chance="0.35"/></trigger>
+
+<chance value="0.5">
+<aresult type="ERASER"/>
+</chance>
+</element>
+
+<element name="OIL" color="804040" menu="1">
+
+<trigger type="FIRE">
+<cresult type="FIRE" chance="0.85"/>
+</trigger>
+
+<trigger dir="D" type="ERASER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.25"/></trigger>
+</element>
+
+<element name="BOTTLE ROCKET" color="ffff00" menu="1">
+<trigger type="FIRE"> 
+<explosion type="1" result="FIRE" size="4.50" chance="1000.00"/>
+<cresult type="FIRE"/>
+</trigger>
+
+</element>
+
+
+
+<element name="TNT" color="faf29c" menu="1">
+<trigger type="FIRE">
+<explosion type="2" result="FIRE" size="0.8" chance="0.75"/>
+<cresult type="FIRE"/>
+</trigger>
+
+</element>
+
+<element name="NITRO" color="347606" menu="1">
+
+<trigger type="FIRE">
+<explosion type="1" result="FIRE" size="4.0"/>
+<cresult type="FIRE"/>
+</trigger>
+
+<trigger dir="D" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="ERASER|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="ERASER">
+<swap chance="0.25"/></trigger>
+</element>
+
+
+</enigma>

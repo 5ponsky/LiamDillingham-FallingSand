@@ -1,0 +1,110 @@
+<enigma background="BLANK" barrier="WALL">
+<channel name="heat" min="0" max="400"/>
+
+<element name="WALL" color="808080" menu="1">
+</element>
+
+<element name="BLANK" color="000000" menu="1">
+</element>
+
+<element name="SAND" color="eecc80" menu="1">
+<trigger dir="D" type="BLANK|WATER|OIL">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="BLANK|WATER|OIL">
+<swap chance="0.45"/></trigger>
+<trigger dir="L|R" type="BLANK">
+<swap chance="0.05"/></trigger>
+</element>
+
+<element name="SALTWATER" color="4080ff">
+<trigger dir="D" type="BLANK|OIL|WATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="BLANK|OIL|WATER">
+<swap chance="0.45"/></trigger>
+<trigger dir="L|R" type="BLANK">
+<swap chance="0.05"/></trigger>
+</element>
+
+<element name="SALT" color="ffffff" menu="1">
+<rule>
+<trigger type="WATER"/>
+<chance value="0.75"/>
+<aresult type="SALTWATER"/>
+<bresult type="BLANK"/>
+</rule>
+
+
+<trigger dir="D" type="BLANK|OIL">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="BLANK">
+<swap chance="0.45"/></trigger>
+<trigger dir="L|R" type="BLANK">
+<swap chance="0.05"/></trigger>
+</element>
+
+<element name="WATER" color="2020ff" menu="1">
+<trigger dir="D" type="BLANK|OIL">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="BLANK|OIL">
+<swap chance="0.65"/></trigger>
+<trigger dir="L|R" type="BLANK|OIL">
+<swap chance="0.15"/></trigger>
+</element>
+
+<element name="PLANT" color="20cc20" menu="1">
+<trigger type="WATER" dir="U|D|L|R|UL|UR|DL|DR">
+<bresult type="PLANT"/></trigger>
+
+<trigger type="FIRE">
+<bresult type="FIRE" chance="0.50"/>
+<aresult type="FIRE" chance="0.50"/></trigger>
+</element>
+
+<element name="FIRE" color="ff4040" menu="1">
+<trigger dir="U" type="BLANK">
+<swap chance="0.35"/></trigger>
+
+<chance value="0.5">
+<aresult type="BLANK"/>
+</chance>
+</element>
+
+<element name="OIL" color="804040" menu="1">
+
+<trigger type="FIRE">
+<cresult type="FIRE" chance="0.85"/>
+</trigger>
+
+<trigger dir="D" type="BLANK">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="BLANK">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="BLANK">
+<swap chance="0.25"/></trigger>
+</element>
+
+<element name="C-4" color="faf29c" menu="1">
+<trigger type="FIRE">
+<explosion type="2" result="FIRE" size="0.8" chance="0.75"/>
+<cresult type="FIRE"/>
+</trigger>
+
+</element>
+
+<element name="NITRO" color="347606" menu="1">
+
+<trigger type="FIRE">
+<explosion type="1" result="FIRE" size="4.0"/>
+<cresult type="FIRE"/>
+</trigger>
+
+<trigger dir="D" type="BLANK|WATER|OIL|SALTWATER">
+<swap chance="0.95"/></trigger>
+<trigger dir="DL|DR" type="BLANK|WATER|OIL|SALTWATER">
+<swap chance="0.70"/></trigger>
+<trigger dir="L|R" type="BLANK">
+<swap chance="0.25"/></trigger>
+</element>
+
+
+</enigma>
